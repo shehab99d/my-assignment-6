@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Janala</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<style>
+    .poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.synthwave {
+  background-color: #2a0134;
+  color:rgb(239, 210, 69);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+/* #00BCFF */
+
+</style>
+</head>
+<body class="poppins-regular">
+    <header>
+        <nav id="navBar" class="py-6 px-14 bg-[#e4e0e0] border-b-2 border-[#C6BDBD] ">
+            <div class="flex justify-between">
+                <div class="flex items-center"> 
+                    <h1 class="font-semibold text-[20px]">English</h1>
+                    <img src="assets/logo.png" alt="">
+                    <p class="text-[20px]">জানালা</p>
+                </div>
+                <div class="flex gap-4 items-center">
+                    <button id="faq" class="flex items-center gap-2 btn btn-outline btn-primary  group">
+                        <img src="assets/fa-circle-question.png" alt="" class="group-hover:invert"> FAQ
+                    </button>
+                    <button id="learn-scroll-button" class="flex items-center gap-2 btn btn-outline btn-primary  group">
+                        <img src="assets/fa-book-open.png" alt="" class="group-hover:invert"> Learn
+                    </button>
+                    <button class="flex items-center gap-2 btn btn-outline btn-primary  group">
+                        <img src="assets/fa-arrow-right-from-bracket.png" alt="" class="group-hover:invert"> LogOut
+                    </button>
+
+                    <label class="flex cursor-pointer gap-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round">
+                          <circle cx="12" cy="12" r="5" />
+                          <path
+                            d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" />
+                        </svg>
+                        
+                        <!-- এখানে id="theme-toggle" যোগ করা হয়েছে -->
+                        <input type="checkbox" id="theme-toggle" value="synthwave" class="toggle theme-controller" />
+                      
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round">
+                          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                      </label>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="mx-14 flex items-center justify-between">
+                <div>
+                    <h1 class="text-[53px] mb-3 font-bold"><span class="text-[#00BCFF]">English</span> is easy!!</h1>
+                    <p class="text-[#18181B]">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা <br>আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে <br>যাবে অন্য একটি Level এ</p>
+
+                    <input  class="border border-slate-400 mb-3 mt-10 py-1 px-2 rounded-md" type="text" placeholder="Enter Your Name">
+                    <br class="mb-3">
+                    <input class="mb-4 border border-slate-400 py-1 px-2 rounded-md"  name="" id="password-input" placeholder="Valid Password 123456">
+                    <br>
+                    <button id="get-started-btn" class="btn btn-primary rounded-lg">Get Started</button>
+                </div>
+                <div>
+                    <img src="assets/hero-student.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section  class="mt-56 ">
+           <div id="learn-scroll" class="text-center">
+            <h1 class="text-[53px] font-bold "><span class="text-[#00BCFF]">Let's</span> Learn Vocabularies</h1>
+             <div><!-- API buttons --></div> 
+           </div>
+        </section>
+        <section id="faq-section">
+            <div class="mt-[160px]  mx-14"> 
+                <h1 class="text-[53px] font-bold mb-[80px] text-center"><span class="text-[#00BCFF]">Frequently</span> Asked Questions</h1>
+                <div class=" ">
+                    <div class="collapse collapse-plus bg-[#F8F8F8] border border-base-300 mb-4">
+                        <input type="radio" name="my-accordion-3" checked="checked" />
+                        <div class="collapse-title font-semibold">1. What is the different between var, let and const?</div>
+                        <div class="collapse-content text-sm">var: Function/global scope, can be re-declared and reassigned.
+                            <br>
+                            let: Block scope, can be reassigned but not re-declared.
+                            <br>
+                            const: Block scope, cannot be reassigned or re-declared, but contents of objects/arrays can be changed.</div>
+                      </div>
+                      <div class="collapse collapse-plus bg-[#F8F8F8] border border-base-300 mb-4">
+                        <input type="radio" name="my-accordion-3" />
+                        <div class="collapse-title font-semibold">2. What is the different between map(), forEach(), and filter()</div>
+                        <div class="collapse-content text-sm">map(): Creates a new array by transforming each element.
+                            <br>
+                            forEach(): Executes a function on each element, with no return value.
+                            <br>
+                            filter(): Creates a new array with elements that pass a condition.</div>
+                      </div>
+                      <div class="collapse collapse-plus bg-[#F8F8F8] border border-base-300 mb-4">
+                        <input type="radio" name="my-accordion-3" />
+                        <div class="collapse-title font-semibold">3. What are arrow function, and how are they different from regular function</div>
+                        <div class="collapse-content text-sm ">Arrow function: A shorter syntax for writing functions, using =>, and it doesn't have its own this, arguments, or super.
+                            <br>
+                            Difference: Arrow functions are more concise and do not bind their own this, while regular functions have their own this and can be used as constructors.</div>
+                      </div>
+                      <div class="collapse collapse-plus bg-[#F8F8F8] border border-base-300 mb-4">
+                        <input type="radio" name="my-accordion-3" />
+                        <div class="collapse-title font-semibold">4. How do JavaScript promise work</div>
+                        <div class="collapse-content text-sm">A Promise in JavaScript represents an asynchronous operation, which can be in one of three states: pending, resolved (successful), or <br>rejected (failed). You create it with new Promise(), using resolve for success and reject for failure. Use .then() to handle success and .catch() for failure.</div>
+                      </div>
+                      <div class="collapse collapse-plus bg-[#F8F8F8] border border-base-300 mb-4">
+                        <input type="radio" name="my-accordion-3" />
+                        <div class="collapse-title font-semibold">5. How does closure work in JavaScript</div>
+                        <div class="collapse-content text-sm">A closure in JavaScript occurs when a function retains access to its lexical scope, even after the outer function has <br>finished executing. This means inner functions can access variables from the outer function, even if the outer function has returned.
+
+
+
+
+
+
+
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </section>
+        <hr class="mt-60 mb-40 border border-slate-500 ">
+    </main>
+    <footer class="pb-14">
+        <div class="mx-14 flex justify-between">
+            <div class="">
+                <div class="flex items-center mb-[10px]"> 
+                    <h1 class="font-semibold text-[20px]">English</h1>
+                    <img src="assets/logo.png" alt="">
+                    <p class="text-[20px]">জানালা</p>
+                </div>
+                
+
+                <p class="font-semibold mb-2">ইংরেজি শিখুন সহজে</p>
+                    
+                <p>Providing ED-Tech Applications since 2025</p>
+            </div>
+            <div class="text-center mt-4">
+                <p class="font-semibold mb-3">Follow us</p>
+                <div class="flex gap-3">
+                    <img src="assets/fb-thumb.png" alt="">
+                    <img src="assets/instagram-thumb.png" alt="">
+                    <img src="assets/youtube-thumb.png" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Ajke logOut button er kaj korte hobe -->
+    <script src="script/script.js"></script>
+</body>
+</html>
