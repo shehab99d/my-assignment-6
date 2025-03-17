@@ -1,11 +1,18 @@
-const showLader = () =>{
-  document.getElementById('loader').classList.remove('hidden')
-  document.getElementById('all-lessons').classList.add('hidden')
+const showLoader = ()=>{
+  document.getElementById("loader").classList.remove('hidden')
+  document.getElementById("learn-scroll").classList.add('hidden')
+
 }
-const hideLader = () =>{
-  document.getElementById('loader').classList.add('hidden')
-  document.getElementById('learn-scroll').classList.remove('hidden')
+const hideLoader = ()=>{
+  document.getElementById("loader").classList.add('hidden')
+  document.getElementById("learn-scroll").classList.remove('hidden')
+
 }
+
+
+
+
+// Fetch Function Update with Loader
 
 const themeToggle = document.getElementById("theme-toggle");
 
@@ -35,13 +42,13 @@ const faqButton = document.getElementById('faq').addEventListener('click', funct
 
 
 
-const passwordInput          = document.getElementById('password-input');
-const LearnVocabularies      = document.getElementById('learn-scroll');
-const faqSection             = document.getElementById('faq-section');
-const getStartedBtn          = document.getElementById('get-started-btn');
-const navBarShow             = document.getElementById('navBar');
-const firstSection           = document.getElementById('first-section');
-const logOutBtn              = document.getElementById('logOut-btn');
+const passwordInput     = document.getElementById('password-input');
+const LearnVocabularies = document.getElementById('learn-scroll');
+const faqSection        = document.getElementById('faq-section');
+const getStartedBtn     = document.getElementById('get-started-btn');
+const navBarShow        = document.getElementById('navBar');
+const firstSection      = document.getElementById('first-section');
+const logOutBtn         = document.getElementById('logOut-btn');
 
 LearnVocabularies.classList.add('hidden');
 faqSection.classList.add('hidden');
@@ -110,7 +117,7 @@ const loadAlLevels = async () => {
 };
 
 function displayAllLevels(levels) {
-   
+
   const LearnVocabulariesDiv = document.getElementById('Learn-Vocabularies');
   for (const level of levels) {
     const levelDiv = document.createElement('div');
@@ -128,6 +135,7 @@ function displayAllLevels(levels) {
 }
 
 function displayCategoryLevel(button, levelNo) {
+  
   document.querySelectorAll('.category-btn').forEach(btn => {
     btn.classList.remove('active');
   });
@@ -137,7 +145,10 @@ function displayCategoryLevel(button, levelNo) {
 
 
 const loadCategoryWords = (level) =>{
-  
+
+
+
+
   const url = `
   https://openapi.programming-hero.com/api/level/${level}
   `
@@ -188,7 +199,10 @@ const displayWordsDetails = (word_word) => {
   detailsContainer.innerHTML = `
     <h1 class="text-3xl font-bold">${word_word.word}:   ${word_word.pronunciation} </h1>
     <h1 class="text-xl font-bold mt-2">Meaning</h1>
-    <p class="text-lg">${word_word.meaning}</p>
+    <p class="text-lg">
+  ${word_word.meaning ? word_word.meaning : "অর্থ নেই"}
+</p>
+
 
     <h1 class="text-xl font-bold mt-4">Example</h1>
     <p class="text-lg">${word_word.sentence}</p>
@@ -204,7 +218,7 @@ const displayWordsDetails = (word_word) => {
 
 
 const displayAllWords = (words) => {
-  
+ 
   console.log(words);
   const allLessons = document.getElementById('all-lessons');
   allLessons.innerHTML = "";
@@ -212,7 +226,7 @@ const displayAllWords = (words) => {
   if(words.length === 0){
    
     allLessons.innerHTML = `
-    <div id="div-number-2" class="col-span-4 text-center flex flex-col items-center bg-[#F8F8F8] mx-14 rounded-xl mt-10 py-16">
+    <div id="div-number-2" class=" col-span-4 text-center flex flex-col items-center bg-[#F8F8F8] mx-14 rounded-xl mt-10 py-16">
                 <img class="mb-2" src="assets/alert-error.png" alt="">
                 <p class="text-[#79716B] text-[14px]">এই Lesson এ এখনো কোন Vocabulary যুক্ত করা হয়নি।</p>
                 <h1 class="mt-3 text-[30px] text-[#292524]">নেক্সট Lesson এ যান</h1>
@@ -220,8 +234,6 @@ const displayAllWords = (words) => {
     `
     return;
   }
-
-  
 words.forEach((word, index) => {
     console.log(word);
     const wordCard = document.createElement("div");
@@ -232,7 +244,10 @@ words.forEach((word, index) => {
         <div class="card-body text-center">
           <h2 class="text-center text-[32px] font-bold mt-5 mb-5">${word.word}</h2>
           <p class="text-20px font-semibold">Meaning / Pronunciation</p>
-          <h2 class="text-center text-[32px] font-bold mt-4">${word.meaning} / ${word.pronunciation}</h2>
+          <h2 class="text-center text-[32px] font-bold mt-4">
+  ${word.meaning ? word.meaning : "অর্থ নেই"} / ${word.pronunciation ? word.pronunciation : ""}
+</h2>
+
           <div class="flex justify-between mt-20">
             <!-- Modal Open Button -->
 
@@ -259,7 +274,7 @@ words.forEach((word, index) => {
     
     allLessons.append(wordCard);
   });
-  hideLader()
+  hideLoader()
 };
 
 
